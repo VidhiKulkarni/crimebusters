@@ -12,7 +12,7 @@ public class JokesInit {
     
     // Inject repositories
     @Autowired JokesJpaRepository repository;
-    /* NOTE: COMMENT OUT TO FIX AN ERROR
+     //NOTE: COMMENT OUT TO FIX AN ERROR
     @Bean
     CommandLineRunner run() {  // The run() method will be executed after the application starts
         return args -> {
@@ -51,6 +51,6 @@ public class JokesInit {
         };
         
     }
-    */
+    
 }
 

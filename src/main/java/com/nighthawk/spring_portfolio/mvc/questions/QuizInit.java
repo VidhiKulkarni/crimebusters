@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 public class QuizInit {
     @Autowired QuizRepository repository;
     
+    /* NOTE: TEMP COMMENT OUT 
     @Bean
     CommandLineRunner run() {  // The run() method will be executed after the application starts
         return args -> {
@@ -34,5 +35,6 @@ public class QuizInit {
             
         };
     }
+    */ 
 }
 
