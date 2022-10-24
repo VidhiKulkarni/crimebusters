@@ -24,7 +24,7 @@ public class JokesInit {
                 "Out of the following choices, which would be considered suspicious activity?",
                 "What should you do if a gun is pointed at you and the criminal asks you to give up your belongings?"
             };
-
+   
             // make sure Joke database is populated with starting jokes
             for (String joke : jokesArray) {
                 List<Jokes> test = repository.findByJokeIgnoreCase(joke);  // JPA lookup
