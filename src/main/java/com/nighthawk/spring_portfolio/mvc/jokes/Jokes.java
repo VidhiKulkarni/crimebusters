@@ -20,4 +20,6 @@ public class Jokes {
 
     private int haha;
     private int boohoo;
+    private int choiceC;
+    private int choiceD;
 }
