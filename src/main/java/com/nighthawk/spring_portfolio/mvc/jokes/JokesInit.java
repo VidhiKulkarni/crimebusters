@@ -20,11 +20,11 @@ public class JokesInit {
 
             // starting jokes
             final String[] jokesArray = {
-                "What are some possible reasons crimes may go unreported?\nA.",
+                "What are some possible reasons crimes may go unreported?",
+                "What should you do in the case someone breaks into your house?",
                 "Out of the following choices, which would be considered suspicious activity?",
                 "What should you do if a gun is pointed at you and the criminal asks you to give up your belongings?"
             };
-            // testing out crimebusters quiz backend
 
             // make sure Joke database is populated with starting jokes
             for (String joke : jokesArray) {
@@ -37,6 +37,6 @@ public class JokesInit {
         };
         
     }
-    
+
 }
 
