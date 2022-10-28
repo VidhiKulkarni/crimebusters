@@ -67,7 +67,7 @@ public class JokesApiController {
         Optional<Jokes> optional = repository.findById(id);
         if (optional.isPresent()) {  // Good ID
             Jokes joke = optional.get();
-            joke.setBoohoo(joke.getChoiceC()+1);
+            joke.setChoiceC(joke.getChoiceC()+1);
             repository.save(joke);
             return new ResponseEntity<>(joke, HttpStatus.OK);
         }
