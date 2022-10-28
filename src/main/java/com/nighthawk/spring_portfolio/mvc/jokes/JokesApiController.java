@@ -75,7 +75,7 @@ public class JokesApiController {
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
     
-        @PutMapping("/choiceD/{id}")
+    @PutMapping("/choiceD/{id}")
     public ResponseEntity<Jokes> setChoiceD(@PathVariable long id) {
         Optional<Jokes> optional = repository.findById(id);
         if (optional.isPresent()) {  // Good ID
