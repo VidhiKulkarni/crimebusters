@@ -14,7 +14,7 @@ public class AnswersInit {
     @Autowired AnswersJpaRepository repository;
      //NOTE: COMMENT OUT TO FIX AN ERROR
     @Bean
-    CommandLineRunner run() {  // The run() method will be executed after the application starts
+    CommandLineRunner runanswer() {  // The run() method will be executed after the application starts
         return args -> {
             // Fail safe data validations
 
