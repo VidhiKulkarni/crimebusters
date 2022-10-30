@@ -20,7 +20,7 @@ public class JokesInit {
 
             // starting jokes
             final String[] jokesArray = {
-                "What are some possible reasons crimes may go unreported?",
+                "What are some possible reasons crimes may go unreported?\nA.People are hesitant to call out of fear they will be identified by the potential criminal",
                 "What should you do in the case someone breaks into your house?",
                 "Out of the following choices, which would be considered suspicious activity?",
                 "What should you do if a gun is pointed at you and the criminal asks you to give up your belongings?"
