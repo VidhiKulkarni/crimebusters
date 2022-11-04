@@ -1,4 +1,4 @@
-package com.nighthawk.spring_portfolio.mvc.jokes;
+package com.nighthawk.spring_portfolio.mvc.quiz;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,23 +16,23 @@ public class QuizApiController {
     @Autowired
     private QuizJpaRepository repository;
 
-    /* GET List of Jokes
+    /* GET List of Quiz
      * @GetMapping annotation is used for mapping HTTP GET requests onto specific handler methods.
      */
     @GetMapping("/")
     public ResponseEntity<List<Quiz>> getQuiz() {
-        // ResponseEntity returns List of Jokes provide by JPA findAll()
+        // ResponseEntity returns List of Quiz provide by JPA findAll()
         return new ResponseEntity<>( repository.findAll(), HttpStatus.OK);
     }
 
-    /* Update Like
+    /* Update choiceA
      * @PutMapping annotation is used for mapping HTTP PUT requests onto specific handler methods.
      * @PathVariable annotation extracts the templated part {id}, from the URI
      */
     @PutMapping("/choiceA/{id}")
     public ResponseEntity<Quiz> setchoiceA(@PathVariable long id) {
         /* 
-        * Optional (bequiz is a container object which helps determine if a result is present. 
+        * Optional (below) is a container object which helps determine if a result is present. 
         * If a value is present, isPresent() will return true
         * get() will return the value.
         */
@@ -47,7 +47,7 @@ public class QuizApiController {
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);  // Failed HTTP response: status code, headers, and body
     }
 
-    /* Update Jeer
+    /* Update choiceB
      */
     @PutMapping("/choiceB/{id}")
     public ResponseEntity<Quiz> setChoiceB(@PathVariable long id) {
@@ -62,6 +62,7 @@ public class QuizApiController {
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 
+    // Update choiceC
     @PutMapping("/choiceC/{id}")
     public ResponseEntity<Quiz> setChoiceC(@PathVariable long id) {
         Optional<Quiz> optional = repository.findById(id);
@@ -75,6 +76,7 @@ public class QuizApiController {
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
     
+    // Update choiceD
     @PutMapping("/choiceD/{id}")
     public ResponseEntity<Quiz> setChoiceD(@PathVariable long id) {
         Optional<Quiz> optional = repository.findById(id);

@@ -1,4 +1,4 @@
-package com.nighthawk.spring_portfolio.mvc.jokes;
+package com.nighthawk.spring_portfolio.mvc.quiz;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -32,6 +32,7 @@ public class Quiz {
     public Quiz() {
     }
 
+    // getters and setters
     public Long getId() {
         return id;
     }
@@ -47,7 +48,6 @@ public class Quiz {
     public void setQuestion(String question) {
         this.quiz = question;
     }
-
 
     public int getChoiceA() {
         return choiceA;
@@ -83,12 +83,5 @@ public class Quiz {
 
 
 
-    /* 
-    private String quiz;
-
-    private int choiceA;
-    private int choiceB;
-    private int choiceC;
-    private int choiceD;
-    */
+    
 }
