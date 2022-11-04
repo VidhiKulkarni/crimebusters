@@ -12,13 +12,12 @@ public class QuizInit {
     
     // Inject repositories
     @Autowired QuizJpaRepository repository;
-     //NOTE: COMMENT OUT TO FIX AN ERROR
     @Bean
     CommandLineRunner run() {  // The run() method will be executed after the application starts
         return args -> {
             // Fail safe data validations
 
-            // starting jokes
+            // quiz questions
             final String[] quizArray = {
                 "What are some possible reasons crimes may go unreported?",
                 "What should you do in the case someone breaks into your house?",
@@ -26,7 +25,7 @@ public class QuizInit {
                 "What should you do if a gun is pointed at you and the criminal asks you to give up your belongings?"
             };
 
-            // make sure Joke database is populated with starting jokes
+            // make sure Quiz database is populated with starting quiz
             for (String quiz : quizArray) {
                 List<Quiz> test = repository.findByQuizIgnoreCase(quiz);  // JPA lookup
                 if (test.size() == 0)
