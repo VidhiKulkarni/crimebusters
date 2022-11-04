@@ -7,7 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id; 
 
 @Entity
-public class Quiz {
+public class QuizOld {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id; 
@@ -19,7 +19,7 @@ public class Quiz {
     private int choiceA;
     private int choiceB; 
 
-    public Quiz(Long id, String question, String answer) {
+    public QuizOld(Long id, String question, String answer) {
         this.id = id; 
         this.question = question;
         this.answer = answer;
@@ -27,7 +27,7 @@ public class Quiz {
         this.choiceB = choiceB;
     }
 
-    public Quiz() {
+    public QuizOld() {
     }
 
     public Long getId() {
