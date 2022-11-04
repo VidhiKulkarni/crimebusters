@@ -30,7 +30,6 @@ public class QuizInit {
                 List<Quiz> test = repository.findByQuizIgnoreCase(quiz);  // JPA lookup
                 if (test.size() == 0)
                 repository.save(new Quiz(null, quiz, 0, 0, 0, 0)); //JPA save
-                    
             }
             
         };
