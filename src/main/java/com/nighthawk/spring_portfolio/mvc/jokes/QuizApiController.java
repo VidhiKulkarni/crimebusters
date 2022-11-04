@@ -20,7 +20,7 @@ public class QuizApiController {
      * @GetMapping annotation is used for mapping HTTP GET requests onto specific handler methods.
      */
     @GetMapping("/")
-    public ResponseEntity<List<Quiz>> getJokes() {
+    public ResponseEntity<List<Quiz>> getQuiz() {
         // ResponseEntity returns List of Jokes provide by JPA findAll()
         return new ResponseEntity<>( repository.findAll(), HttpStatus.OK);
     }
@@ -30,18 +30,18 @@ public class QuizApiController {
      * @PathVariable annotation extracts the templated part {id}, from the URI
      */
     @PutMapping("/choiceA/{id}")
-    public ResponseEntity<Quiz> setLike(@PathVariable long id) {
+    public ResponseEntity<Quiz> setchoiceA(@PathVariable long id) {
         /* 
-        * Optional (below) is a container object which helps determine if a result is present. 
+        * Optional (bequiz is a container object which helps determine if a result is present. 
         * If a value is present, isPresent() will return true
         * get() will return the value.
         */
         Optional<Quiz> optional = repository.findById(id);
         if (optional.isPresent()) {  // Good ID
-            Quiz joke = optional.get();  // value from findByID
-            joke.setChoiceA(joke.getChoiceA()+1); // increment value
-            repository.save(joke);  // save entity
-            return new ResponseEntity<>(joke, HttpStatus.OK);  // OK HTTP response: status code, headers, and body
+            Quiz quiz = optional.get();  // value from findByID
+            quiz.setChoiceA(quiz.getChoiceA()+1); // increment value
+            repository.save(quiz);  // save entity
+            return new ResponseEntity<>(quiz, HttpStatus.OK);  // OK HTTP response: status code, headers, and body
         }
         // Bad ID
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);  // Failed HTTP response: status code, headers, and body
@@ -50,13 +50,13 @@ public class QuizApiController {
     /* Update Jeer
      */
     @PutMapping("/choiceB/{id}")
-    public ResponseEntity<Quiz> setJeer(@PathVariable long id) {
+    public ResponseEntity<Quiz> setChoiceB(@PathVariable long id) {
         Optional<Quiz> optional = repository.findById(id);
         if (optional.isPresent()) {  // Good ID
-            Quiz joke = optional.get();
-            joke.setChoiceB(joke.getChoiceB()+1);
-            repository.save(joke);
-            return new ResponseEntity<>(joke, HttpStatus.OK);
+            Quiz quiz = optional.get();
+            quiz.setChoiceB(quiz.getChoiceB()+1);
+            repository.save(quiz);
+            return new ResponseEntity<>(quiz, HttpStatus.OK);
         }
         // Bad ID
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
@@ -66,10 +66,10 @@ public class QuizApiController {
     public ResponseEntity<Quiz> setChoiceC(@PathVariable long id) {
         Optional<Quiz> optional = repository.findById(id);
         if (optional.isPresent()) {  // Good ID
-            Quiz joke = optional.get();
-            joke.setChoiceC(joke.getChoiceC()+1);
-            repository.save(joke);
-            return new ResponseEntity<>(joke, HttpStatus.OK);
+            Quiz quiz = optional.get();
+            quiz.setChoiceC(quiz.getChoiceC()+1);
+            repository.save(quiz);
+            return new ResponseEntity<>(quiz, HttpStatus.OK);
         }
         // Bad ID
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
@@ -79,10 +79,10 @@ public class QuizApiController {
     public ResponseEntity<Quiz> setChoiceD(@PathVariable long id) {
         Optional<Quiz> optional = repository.findById(id);
         if (optional.isPresent()) {  // Good ID
-            Quiz joke = optional.get();
-            joke.setChoiceD(joke.getChoiceD()+1);
-            repository.save(joke);
-            return new ResponseEntity<>(joke, HttpStatus.OK);
+            Quiz quiz = optional.get();
+            quiz.setChoiceD(quiz.getChoiceD()+1);
+            repository.save(quiz);
+            return new ResponseEntity<>(quiz, HttpStatus.OK);
         }
         // Bad ID
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
