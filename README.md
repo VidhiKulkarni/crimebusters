@@ -11,7 +11,7 @@ Our project provides both frontend and backend features:
 <br>
 
 ## Our team
-Scrum Master: Vidhi
+Scrum Master + Frontend Developer: Vidhi
 
 Frontend Developer: Riya
 
