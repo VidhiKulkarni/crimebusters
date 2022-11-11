@@ -7,10 +7,14 @@ Our project provides both frontend and backend features:
 * [Safety score calculator](https://riya-patil.github.io/crimebustersproject1/safetyscorecalc/), [crime trivia](https://riya-patil.github.io/crimebustersproject1/crimetrivia/), and [safety survey](https://riya-patil.github.io/crimebustersproject1/Quiz/) are written with JavaScript. 
 * [World crime news](https://riya-patil.github.io/crimebustersproject1/crimebusters/news) fetches an API using JavaScript fetch. 
 
+
+<br>
+
+## Our team
 Scrum Master: Vidhi
 
 Frontend Developer: Riya
 
 Backend Developer: William
 
-DevOps: Lily
+DevOps + Backend Developer: Lily
